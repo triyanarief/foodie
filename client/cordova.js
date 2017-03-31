@@ -4,5 +4,6 @@ Meteor.startup(function() {
 
 success = function(position) {
   Session.set('location', position);
+  debugger
   Meteor.call('fetchNearbyLocations', position.coords)
 }
